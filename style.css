@@ -1,0 +1,228 @@
+
+
+:root{
+
+	font-size: 20px;
+	--size-h1: 2rem;
+	--size-h2:1.75rem;
+	--size-p:1rem;
+	--color-background:#BAE8FF;
+	--color-text:#FF0001;
+	--leading: 2cap;
+	line-height: var(--leading);
+
+
+		@media(width >=1360px){
+			font-size:24px;
+
+
+		}
+
+}
+
+*{
+
+	line-height:var(--leading);
+	color:var(--color-text);
+}
+html{
+	background-color:var(--color-background);
+	margin-inline-start:.75rlh;
+	margin-inline-end:.75rlh;
+
+		@media(width >=1360px){
+			margin-inline-start:2rlh;
+			margin-inline-end:2rlh;
+
+
+
+
+		}
+
+
+}
+
+@font-face {
+
+	font-family:'Bugrino';
+	font-weight:400;
+	src: url('BugrinoTrial-Regular.otf')
+	format('opentype');
+
+}
+@font-face {
+
+	font-family:'Bugrino';
+	font-weight:500;
+	src: url('BugrinoTrial-Medium.otf')
+	format('opentype');
+
+}
+
+@font-face {
+
+	font-family:'Bugrino';
+	font-weight:600;
+	src: url('BugrinoTrial-Semibold.otf')
+	format('opentype');
+
+}
+
+/* Atoms */
+
+h1{
+
+	font-size:var(--size-h1);
+	font-family:'Bugrino',sans-serif;
+	font-weight:600;
+	text-box: trim-both cap alphabetic;
+	line-height:1.5cap;
+	margin-block-end:1rlh;
+
+}
+
+h2{
+	font-size:var(--size-h2);
+	font-family: 'Bugrino', sans-serif;
+	font-weight:400;
+	text-box: trim-both cap alphabetic;
+	margin-block-end:3cap;
+	margin-block-start:3cap;
+
+
+}
+
+p{
+	font-size:var(--size-p);
+	text-box: trim-both cap alphabetic;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/* Molecules */
+
+nav{
+
+	block-size:2rlh ;
+	border-block-end:1px solid  var(--color-text) ;
+	@media (width >= 800px) {
+	block-size:3rlh;
+
+
+	}
+
+}
+
+#heading-container{
+	#heading{
+
+			@media( width > 800px){
+
+				position: sticky;
+				inset-block-start:1rlh;
+
+
+			}
+
+		> :first-child{
+			text-align: start;
+
+		}
+		>:nth-child(2){
+			text-align: end;
+
+
+		}
+		>#author{
+			text-align:end;
+			margin-block-end:1cap;
+
+		}
+		>time{
+			text-align:end;
+		}
+
+	}
+}
+
+
+/* Organisms */
+
+article{
+
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	row-gap:1rcap;
+	grid-template-areas:
+	'nav nav nav nav'
+	'head head head head'
+	'body body body body';
+
+	@media (width >= 900px) {
+		grid-template-columns:repeat(8,1fr);
+		column-gap:4rcap;
+		grid-template-areas:
+		'nav nav nav nav nav nav nav nav'
+		'head head head body body body body body'
+		'head head head body body body body body';
+
+
+	}
+	@media(width >=1360px){
+		grid-template-columns:repeat(12,1fr);
+		column-gap:6rcap;
+		grid-template-areas:
+		'nav nav nav nav nav nav nav nav nav nav nav nav'
+		'head head head head body body body body body body body body'
+		'head head head head body body body body body body body body';
+
+
+	}
+
+
+
+	}
+	nav{
+		grid-area:nav;
+
+
+
+	}
+
+	#heading-container{
+		grid-area:head;
+
+	}
+
+
+	#article-body{
+		display:grid;
+		row-gap:3rcap;
+		grid-area:body;
+		@media(width >=1360px){
+			margin-inline-start:2rlh;
+
+
+
+		}
+
+
+		>.article-section{
+			display:grid;
+			row-gap:3cap;
+			>hgroup{
+
+				>h2{
+
+						text-align:center;
+
+
+				}
+
+
+			}
+
+
+		}
+	}
+
