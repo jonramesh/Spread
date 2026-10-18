@@ -114,6 +114,14 @@ nav{
 }
 
 #heading-container{
+
+	@media( width > 800px){
+
+			border-inline-start:1px solid  var(--color-text) ;
+			border-inline-end:1px solid  var(--color-text) ;
+
+			}
+
 	#heading{
 
 			@media( width > 800px){
