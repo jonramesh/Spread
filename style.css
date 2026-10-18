@@ -106,8 +106,7 @@ nav{
 	block-size:2rlh ;
 	border-block-end:1px solid  var(--color-text) ;
 	@media (width >= 800px) {
-	block-size:3rlh;
-
+		block-size:3rlh;
 
 	}
 
@@ -115,7 +114,7 @@ nav{
 
 #heading-container{
 
-		@media( width > 900px){
+		@media( width > 800px){
 
 			border-inline-start: 1px solid  var(--color-text) ;
 			border-inline-end: 1px solid  var(--color-text) ;
@@ -162,6 +161,10 @@ article{
 	display:grid;
 	grid-template-columns:repeat(4,1fr);
 	row-gap:1rcap;
+	margin-block-end: 2rlh;
+	border-block-end:1px solid  var(--color-text) ;
+
+
 	grid-template-areas:
 	'nav nav nav nav'
 	'head head head head'
@@ -211,7 +214,10 @@ article{
 		@media(width >=1360px){
 			margin-inline-start: 1rlh;
 
+		}
 
+		@media(width>800px){
+		border-inline-end: 1px solid  var(--color-text) ;
 
 		}
 
@@ -219,6 +225,9 @@ article{
 		>.article-section{
 			display:grid;
 			row-gap:3cap;
+			margin-inline-end: 3rlh;
+
+
 			>hgroup{
 
 				>h2{
