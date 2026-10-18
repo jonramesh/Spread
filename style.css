@@ -115,10 +115,10 @@ nav{
 
 #heading-container{
 
-	@media( width > 800px){
+		@media( width > 900px){
 
-			border-inline-start:1px solid  var(--color-text) ;
-			border-inline-end:1px solid  var(--color-text) ;
+			border-inline-start: 1px solid  var(--color-text) ;
+			border-inline-end: 1px solid  var(--color-text) ;
 
 			}
 
@@ -128,7 +128,8 @@ nav{
 
 				position: sticky;
 				inset-block-start:1rlh;
-
+				margin-inline-start: 1rlh;
+				margin-inline-end: 1rlh;
 
 			}
 
@@ -208,7 +209,7 @@ article{
 		row-gap:3rcap;
 		grid-area:body;
 		@media(width >=1360px){
-			margin-inline-start:2rlh;
+			margin-inline-start: 1rlh;
 
 
 
