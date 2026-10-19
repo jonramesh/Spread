@@ -9,6 +9,7 @@
 	--color-background:#BAE8FF;
 	--color-text:#FF0001;
 	--leading: 2cap;
+	--size-logo:1rem;
 	line-height: var(--leading);
 
 
@@ -27,20 +28,11 @@
 }
 html{
 	background-color:var(--color-background);
-	margin-inline-start:.75rlh;
-	margin-inline-end:.75rlh;
 
-		@media(width >=1360px){
-			margin-inline-start:2rlh;
-			margin-inline-end:2rlh;
-
-
-
-
-		}
 
 
 }
+
 
 @font-face {
 
@@ -86,8 +78,8 @@ h2{
 	font-family: 'Bugrino', sans-serif;
 	font-weight:400;
 	text-box: trim-both cap alphabetic;
-	margin-block-end:3cap;
-	margin-block-start:3cap;
+	margin-block-end:1cap;
+	margin-block-start:1cap;
 
 
 }
@@ -98,16 +90,62 @@ p{
 	font-family:Arial, Helvetica, sans-serif;
 }
 
+a{
+
+	font-size:var(--size-p);
+	text-box: trim-both cap alphabetic;
+	font-family:Arial, Helvetica, sans-serif;
+
+
+}
+
 
 /* Molecules */
 
 nav{
 
-	block-size:2rlh ;
-	border-block-end:1px solid  var(--color-text) ;
-	@media (width >= 800px) {
-		block-size:3rlh;
 
+	border-block-end:1px solid  var(--color-text) ;
+	padding-inline-start:.75rlh;
+	padding-inline-end:.75rlh;
+	@media (width >= 1360px) {
+
+		padding-inline-start:2rlh;
+		padding-inline-end:2rlh;
+
+	}
+	>span{
+
+		@media (width >= 800px) {
+
+
+
+		border-inline-end:1px solid  var(--color-text) ;
+		border-inline-start:1px solid  var(--color-text) ;
+		padding-inline-end:.75rlh ;
+		padding-inline-start:.75rlh ;
+		}
+		>#logo{
+
+			font-family:'Bugrino',sans-serif;
+			font-weight:600;
+			font-size:var(--size-logo)
+
+		}
+
+
+	}
+
+	>time{
+		@media (width >= 800px) {
+
+
+
+		border-inline-end:1px solid  var(--color-text) ;
+		border-inline-start:1px solid  var(--color-text) ;
+		padding-inline-end:.75rlh ;
+		padding-inline-start:.75rlh ;
+		}
 	}
 
 }
@@ -121,36 +159,146 @@ nav{
 
 			}
 
+
+
 /* Not sure about how to make the lines connected on the top part */
-	#heading{
+	#heading-sticky{
+		position: sticky;
+		inset-block-start:1rlh;
 
-			@media( width > 800px){
+		#heading{
 
-				position: sticky;
-				inset-block-start:1rlh;
-				margin-inline-start: 1rlh;
+				@media( width > 800px){
+
+
+						margin-inline-start: 1rlh;
 				margin-inline-end: 1rlh;
 
+				}
+
+			> :first-child{
+				text-align: start;
+
+			}
+			>:nth-child(2){
+				text-align: end;
+
+
+			}
+			>#author{
+				text-align:end;
+				margin-block-end:1cap;
+
+			}
+			>time{
+				text-align:end;
 			}
 
-		> :first-child{
-			text-align: start;
+		}
+		>#identifier{
+			margin-block-start:2rlh;
+
+			display:grid;
+			grid-template-columns:repeat(2,1fr);
+
+
+
+
+
+			justify-content: space-between;
+
+			border-block-start: 1px solid  var(--color-text) ;
+			padding-inline: .75rem;
+
+
 
 		}
-		>:nth-child(2){
-			text-align: end;
+		>details{
+			border-block-start: 1px solid  var(--color-text) ;
+			border-block-end: 1px solid  var(--color-text) ;
+			background-color:var(--color-text);
+			padding-block-start: .5rlh;
+			padding-block-end:.5rlh;
+
+			font-family: 'Bugrino', sans-serif;
+			font-weight:400;
+			color:#BAE8FF;
+			text-align:center;
+			font-size:1rem;
+
+				>ol{
+						li{
+						border-block-start: 1px solid  var(--color-background) ;
+						text-align:start;
+						margin-block-start:.5rlh;
+
+						color:#BAE8FF;
+					}
+
+
+				}
+
+
+
+				>summary{
+					color:#BAE8FF;
+					text-align:center;
+					font-size:1.25rem;
+
+
+
+				}
+
+
+
+
+			}
+			>#identifier{
+				display:grid;
+
+				grid-template-areas:
+				'author-label author'
+				'date-label date';
+
+
+
+				>#author-label{
+
+					grid-area:author-label;
+					font-weight:500;
+
+
+				}
+				>#author{
+					grid-area:author;
+					font-family: 'Bugrino';
+
+
+
+
+
+				}
+				>#date-label{
+					grid-area:date-label;
+					font-weight:500;
+
+				}
+				>#date{
+					p{
+
+					grid-area:date;
+					font-family: 'Bugrino', sans-serif;
+
+					}
+
+
+				}
+
+
+
 
 
 		}
-		>#author{
-			text-align:end;
-			margin-block-end:1cap;
-
-		}
-		>time{
-			text-align:end;
-		}
-
 	}
 }
 
@@ -161,21 +309,35 @@ article{
 
 	display:grid;
 	grid-template-columns:repeat(4,1fr);
-	row-gap:1rcap;
+	row-gap:0rcap;
 	margin-block-end: 2rlh;
 	border-block-end:1px solid  var(--color-text) ;
 
 
 	grid-template-areas:
-	'nav nav nav nav'
 	'head head head head'
 	'body body body body';
 
+
+
+	margin-inline-start:.75rlh;
+	margin-inline-end:.75rlh;
+
+		@media(width >=1360px){
+			margin-inline-start:2rlh;
+			margin-inline-end:2rlh;
+
+
+
+
+		}
+
+
+
 	@media (width >= 900px) {
 		grid-template-columns:repeat(8,1fr);
-		column-gap:4rcap;
+		column-gap:0rcap;
 		grid-template-areas:
-		'nav nav nav nav nav nav nav nav'
 		'head head head body body body body body'
 		'head head head body body body body body';
 
@@ -183,9 +345,8 @@ article{
 	}
 	@media(width >=1360px){
 		grid-template-columns:repeat(12,1fr);
-		column-gap:6rcap;
+		column-gap:0rcap;
 		grid-template-areas:
-		'nav nav nav nav nav nav nav nav nav nav nav nav'
 		'head head head head body body body body body body body body'
 		'head head head head body body body body body body body body';
 
@@ -197,6 +358,9 @@ article{
 	}
 	nav{
 		grid-area:nav;
+		display:flex;
+		justify-content: space-between;
+
 
 
 
@@ -212,24 +376,32 @@ article{
 		display:grid;
 		row-gap:3rcap;
 		grid-area:body;
-		@media(width >=1360px){
-			margin-inline-start: 1rlh;
 
-		}
 
 		@media(width>800px){
 		border-inline-end: 1px solid  var(--color-text) ;
+		border-inline-start: 1px solid  var(--color-text) ;
+
+		}
+		@media(width >=1360px){
+			margin-inline-start: 0rlh;
+			border-inline-start: none ;
 
 		}
 
 
 		>.article-section{
 			display:grid;
-			row-gap:3cap;
-			margin-inline-end: 3rlh;
+			row-gap:4rlh;
+
+
+
 
 
 			>hgroup{
+				margin-block-start: 4rlh;
+				border-block-end: 1px solid  var(--color-text) ;
+				border-block-start: 1px solid  var(--color-text) ;
 
 				>h2{
 
@@ -237,6 +409,27 @@ article{
 
 
 				}
+
+
+			}
+
+			>.article-text{
+				display:grid;
+				row-gap:1rlh;
+				@media( width > 800px){
+
+
+				padding-inline-start:4cap;
+				padding-inline-end:4cap;
+
+				margin-inline-end: 0rlh;
+
+				}
+
+
+
+
+
 
 
 			}
