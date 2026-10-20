@@ -393,6 +393,7 @@ article{
 		>.article-section{
 			display:grid;
 			row-gap:4rlh;
+			margin-block-end: 2rlh;
 
 
 
@@ -438,3 +439,24 @@ article{
 		}
 	}
 
+#branding-buttons{
+
+	>p{
+	font-size:1.3rem;
+	font-family: 'Bugrino', sans-serif;
+	font-weight:500;
+	border-block-start: 3px solid  var(--color-text) ;
+	}
+
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	row-gap:3rcap;
+	margin-block-start: 2rlh;
+
+
+	grid-template-areas:
+	'brand brand brand'
+	'brand brand brand'
+	'brand brand brand';
+
+}
