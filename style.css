@@ -514,36 +514,51 @@ article{
 
 
 	display:grid;
-	grid-template-columns:repeat(3,1fr);
+	grid-template-columns:repeat(2,1fr);
 	row-gap:3cap;
+	column-gap: 3cap;
 	margin-block-start:2rlh;
 
 	grid-template-areas:
-	'brand' 'brand' 'brand'
-	'brand' 'brand' 'brand'
-	'brand'  'brand' 'brand';
+	'brand' 'brand'
+	'brand' 'brand'
+	'brand' 'brand'
+	'brand' 'brand'
+	'brand' 'brand';
+
+	@media( width > 800px){
+
+		grid-template-columns:repeat(3,1fr);
+		row-gap: 3cap;
+		column-gap: 3cap;
+
+		grid-template-areas:
+		'brand' 'brand' 'brand'
+		'brand' 'brand' 'brand'
+		'brand'  'brand' 'brand';
+	}
+
 	>section{
 		border-block-start: 3px solid var(--color-text);
+		padding-block-start: 1rem;
 
 
 
 		>label{
-		font-szie:1.3rem;
+		font-size:1.3rem;
 		font-family:'Bugrino',sans-serif;
 		font-weight:500;
-
+		padding-inline-start: 0.5rem;
 
 
 		}
 	}
 
 	>p{
-		font-szie:1.3rem;
+		font-size:1.3rem;
 		font-family:'Bugrino',sans-serif;
 		font-weight:500;
 		border-block-start: 3px solid var(--color-text);
-
-
 
 
 	}
