@@ -439,24 +439,116 @@ article{
 		}
 	}
 
+
+#snoopy-image{
+
+	font-family:'Bugrino';
+	display:flex;
+	flex-wrap:wrap;
+	--box-side:10rem;
+	gap:3cap;
+
+	>:first-child{
+		border: 3px solid var(--color-text);
+		width:var(--box-side);
+		height:var(--box-side);
+		font-size:2rem;
+		align-self:end;
+
+
+
+
+	}
+
+
+	>:nth-child(2){
+		font-size:1.75rem;
+		border: 3px solid var(--color-text);
+		width:calc(var(--box-side)/1.25);
+		height:calc(var(--box-side)/1.25);
+		align-self:end;
+
+
+	}
+
+	>:nth-child(3){
+		font-size:1.5rem;
+		border: 3px solid var(--color-text);
+		width:calc(var(--box-side)/1.5);
+		height:calc(var(--box-side)/1.5);
+		align-self:end;
+
+	}
+
+	>:nth-child(4){
+		font-size:1.25rem;
+		border: 3px solid var(--color-text);
+		width:calc(var(--box-side)/1.75);
+		height:calc(var(--box-side)/1.75);
+		align-self:end;
+
+
+	}
+
+	>:nth-child(5){
+		font-size:1rem;
+		border: 3px solid var(--color-text);
+		width:calc(var(--box-side)/2);
+		height:calc(var(--box-side)/2);
+		align-self:end;
+
+
+	}
+
+
+
+
+
+
+}
+
+
 #branding-buttons{
 
-	>p{
-	font-size:1.3rem;
-	font-family: 'Bugrino', sans-serif;
-	font-weight:500;
-	border-block-start: 3px solid  var(--color-text) ;
-	}
+
+
 
 	display:grid;
 	grid-template-columns:repeat(3,1fr);
-	row-gap:3rcap;
-	margin-block-start: 2rlh;
-
+	row-gap:3cap;
+	margin-block-start:2rlh;
 
 	grid-template-areas:
-	'brand brand brand'
-	'brand brand brand'
-	'brand brand brand';
+	'brand' 'brand' 'brand'
+	'brand' 'brand' 'brand'
+	'brand'  'brand' 'brand';
+	>section{
+		border-block-start: 3px solid var(--color-text);
+
+
+
+		>label{
+		font-szie:1.3rem;
+		font-family:'Bugrino',sans-serif;
+		font-weight:500;
+
+
+
+		}
+	}
+
+	>p{
+		font-szie:1.3rem;
+		font-family:'Bugrino',sans-serif;
+		font-weight:500;
+		border-block-start: 3px solid var(--color-text);
+
+
+
+
+	}
+
+
+
 
 }
