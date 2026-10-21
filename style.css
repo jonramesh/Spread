@@ -617,3 +617,47 @@ footer{
 	text-align: center;
 	margin-block-end: 3rem;
 }
+
+
+#text-image{
+
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+
+	>#word-heirarchy{
+
+		display:flex;
+		flex-direction:column;
+
+		grid-column:1;
+		grid-row:1;
+
+
+	}
+	>#word-heirarchy2{
+
+		display:flex;
+		flex-direction:column;
+		grid-column:2;
+		grid-row:1;
+
+
+	}
+	>:nth-child(3){
+
+
+		grid-column:1/span 2;
+		grid-row:2;
+		border:1px solid var(--color-text);
+		>:first-child{
+
+			border:1px solid var(--color-text);
+		}
+
+
+	}
+
+
+
+}
