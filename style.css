@@ -60,6 +60,18 @@ html{
 
 }
 
+
+
+@font-face {
+
+	font-family:'Bugrino';
+	font-weight:500;
+	font-style:italic;
+	src: url('BugrinoTrial-Italic.otf')
+	format('opentype');
+
+}
+
 /* Atoms */
 
 h1{
@@ -1025,6 +1037,12 @@ footer{
 		color: var(--color-background);
 		font-family: Arial, Helvetica, sans-serif;
 		text-align:start;
+
+		}
+		>:first-child{
+			font-style:italic;
+
+
 
 		}
 
