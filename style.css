@@ -161,7 +161,7 @@ nav{
 
 
 
-/* Not sure about how to make the lines connected on the top part */
+
 	#heading-sticky{
 		position: sticky;
 		inset-block-start:1rlh;
@@ -336,21 +336,21 @@ article{
 
 
 
-	@media (width >= 900px) {
-		grid-template-columns:repeat(8,1fr);
-		column-gap:0rcap;
-		grid-template-areas:
-		'head head head body body body body body'
-		'head head head body body body body body';
+		@media (width >= 800px) {
+			grid-template-columns:repeat(8,1fr);
+			column-gap:0rcap;
+			grid-template-areas:
+			'head head head body body body body body'
+			'head head head body body body body body';
 
 
 	}
-	@media(width >=1360px){
-		grid-template-columns:repeat(12,1fr);
-		column-gap:0rcap;
-		grid-template-areas:
-		'head head head head body body body body body body body body'
-		'head head head head body body body body body body body body';
+		@media(width >=1360px){
+			grid-template-columns:repeat(12,1fr);
+			column-gap:0rcap;
+			grid-template-areas:
+			'head head head head body body body body body body body body'
+			'head head head head body body body body body body body body';
 
 
 	}
@@ -395,10 +395,6 @@ article{
 		>.article-section{
 			display:grid;
 			row-gap:4rlh;
-			margin-block-end: 2rlh;
-
-
-
 
 
 			>hgroup{
@@ -444,7 +440,7 @@ article{
 
 #snoopy-image{
 
-	font-family:'Bugrino';
+	font-family:'Bugrino', sans-serif;
 	display:flex;
 	flex-wrap:wrap;
 	--box-side:10rem;
@@ -511,7 +507,7 @@ article{
 
 #snoopy-image{
 
-    font-family:'Bugrino';
+    font-family:'Bugrino',sans-serif;
     display:flex;
     flex-wrap:wrap;
     --box-side:10rem;
@@ -797,10 +793,8 @@ article{
 
 }
 
-
+/* 2 column grid for mobile, 3 column grid for bigger */
 #branding-buttons{
-
-
 
 
 	display:grid;
@@ -863,14 +857,14 @@ footer{
 	margin-block-end: 3rem;
 }
 
-
+/* 2 column grid for word-hierarchy */
 #text-image{
 
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:1fr 1fr;
 
-	>#word-heirarchy{
+	>#word-hierarchy{
 
 		display:flex;
 		flex-direction:column;
@@ -901,7 +895,7 @@ footer{
 
 
 	}
-	>#word-heirarchy2{
+	>#word-hierarchy2{
 
 		display:flex;
 		flex-direction:column;
@@ -932,6 +926,7 @@ footer{
 
 
 	}
+	/* big-moment is the two-lined box */
 	>#big-moment{
 
 
@@ -966,14 +961,14 @@ footer{
 
 }
 
+/* 4 box by putting border to all nth-child */
 #quote{
-	display:flex;
-	gap:0px;
+
 	flex-direction:column;
+
 		>:first-child{
 			font-family: 'Bugrino',sans-serif;
 			font-weight: 500;
-			font-size: 1.3rem;
 			font-size: 1.2rem;
 			font-style: italic;
 			border: 1px solid var(--color-text);
@@ -984,7 +979,6 @@ footer{
 		>:nth-child(2){
 			font-family: 'Bugrino',sans-serif;
 			font-weight: 500;
-			font-size: 1.3rem;
 			font-size: 1.2rem;
 			font-style: italic;
 			border: 1px solid var(--color-text);
@@ -995,7 +989,6 @@ footer{
 		>:nth-child(3){
 			font-family: 'Bugrino',sans-serif;
 			font-weight: 500;
-			font-size: 1.3rem;
 			font-size: 1.2rem;
 			font-style: italic;
 			border: 1px solid var(--color-text);
@@ -1013,6 +1006,35 @@ footer{
 
 		}
 
+.designers{
+
+	background-color:var(--color-text);
+	padding-block-start: .5rlh;
+	padding-block-end:.5rlh;
+
+	display:flex;
+	justify-content: space-between;
+	padding-inline:4rem;
+
+
+
+	>.designers-column{
+
+		>p{
+
+		color: var(--color-background);
+		font-family: Arial, Helvetica, sans-serif;
+		text-align:start;
+
+		}
+
+	}
+
+
+
+}
+
+		/* only works when written checked */
 		:root:has(#American-online:checked){
 
             --color-text:#FF0B00;
