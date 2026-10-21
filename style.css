@@ -885,17 +885,17 @@ footer{
 		}
 
 		>:nth-child(2){
-			font-size: 1.5rem;
+			font-size: 1.25rem;
 			margin-bottom: 1rem;
 		}
 
 		>:nth-child(3){
-			font-size: 2rem;
+			font-size: 1.5rem;
 			margin-bottom: 1rem;
 		}
 
 		>:nth-child(4){
-			font-size: 2.5rem;
+			font-size: 1.75rem;
 			margin-bottom: 1rem;
 		}
 
@@ -916,17 +916,17 @@ footer{
 		}
 
 		>:nth-child(2){
-			font-size: 1.5rem;
+			font-size: 1.25rem;
 			margin-bottom: 1rem;
 		}
 
 		>:nth-child(3){
-			font-size: 2rem;
+			font-size: 1.5rem;
 			margin-bottom: 1rem;
 		}
 
 		>:nth-child(4){
-			font-size: 2.5rem;
+			font-size: 1.75rem;
 			margin-bottom: 1rem;
 		}
 
@@ -942,7 +942,7 @@ footer{
 
 
 		>:first-child{
-			font-size: 4rem;
+			font-size: 2rem;
 			font-family:'Bugrino';
 			font-weight: 800;
 			padding-inline: 1.5rem;
