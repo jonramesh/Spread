@@ -947,4 +947,7 @@ footer{
 			text-align: center;
 			border: 1px solid var(--color-text);
 				padding: 1rem;
-				margin-block:0rem;	}
+				margin-block:0rem;
+			}
+
+		}
