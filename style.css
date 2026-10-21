@@ -1039,11 +1039,13 @@ footer{
 		text-align:start;
 
 		}
+
 		>:first-child{
 			font-style:italic;
+		}
 
-
-
+		>:not(:first-child){
+			font-size: 1.25rem;
 		}
 
 	}
