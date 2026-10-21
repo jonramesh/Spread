@@ -507,6 +507,36 @@ article{
 
 }
 
+#quote{
+
+	>:first-child{
+		font-family: 'Bugrino',sans-serif;
+		font-weight: 500;
+		font-size: 1.3rem;
+		font-style: italic;
+		border: 1px solid var(--color-text);
+		padding: 1rem;
+	}
+
+	>:nth-child(2){
+		font-family: 'Bugrino',sans-serif;
+		font-weight: 500;
+		font-size: 1.3rem;
+		font-style: italic;
+		border: 1px solid var(--color-text);
+		padding: 1rem;
+	}
+
+	>:nth-child(3){
+		font-family: 'Bugrino',sans-serif;
+		font-weight: 500;
+		font-size: 1.3rem;
+		font-style: italic;
+		border: 1px solid var(--color-text);
+		padding: 1rem;
+	}
+}
+
 
 #branding-buttons{
 
@@ -566,4 +596,9 @@ article{
 
 
 
+}
+
+footer{
+	text-align: center;
+	margin-block-end: 3rem;
 }
