@@ -942,7 +942,8 @@ footer{
 
 
 		>:first-child{
-			font-size: 6rem;
+			font-size: 4rem;
+			font-family:'Bugrino';
 			font-weight: 800;
 			padding-inline: 1.5rem;
 			border:1px solid var(--color-text);
@@ -1001,3 +1002,55 @@ footer{
 			}
 
 		}
+
+		:root:has(#American-online:checked){
+
+            --color-text:#00C4FF;
+            --color-background:#FF0B00;
+        }
+        :root:has(#the-New-Museum:checked){
+
+            --color-text:#FFFFFF;
+            --color-background:#000000;
+        }
+        :root:has(#Popeyes-Louisianan-Kitchen:checked){
+
+            --color-text:#FFFFFF;
+            --color-background:#FF7C00;
+        }
+        :root:has(#Philadelphia-Museum-of-Art:checked){
+
+            --color-text:#FFFFFF;
+            --color-background:#CC0000;
+        }
+        :root:has(#Target:checked){
+
+            --color-text:#FFFFFF;
+            --color-background:#0D009D;
+        }
+        :root:has(#Unilever:checked){
+
+            --color-text:#003A72;
+            --color-background:#DB230B;
+        }
+        :root:has(#Citibank:checked){
+
+            --color-text:#FFFFFF;
+            --color-background:#000000;
+        }
+        :root:has(#MoMa:checked){
+
+            --color-text:#FFFFFF;
+            --color-background:#ED1A3B;
+        }
+        :root:has(#The-Met:checked){
+
+            --color-text:#BAE8FF;
+            --color-background:#FF0001;
+        }
+        :root:has(#Tate:checked){
+
+            --color-text:#FFFFFF;
+            --color-background:#1a1a1a;
+        }
+
