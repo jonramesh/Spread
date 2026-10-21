@@ -904,3 +904,47 @@ footer{
 
 
 }
+
+#quote{
+	display:flex;
+	gap:0px;
+	flex-direction:column;
+		>:first-child{
+			font-family: 'Bugrino',sans-serif;
+			font-weight: 500;
+			font-size: 1.3rem;
+			font-size: 1.2rem;
+			font-style: italic;
+			border: 1px solid var(--color-text);
+			padding: 1rem;
+			padding: 2rem;
+			margin-block:0rem;
+		}
+		>:nth-child(2){
+			font-family: 'Bugrino',sans-serif;
+			font-weight: 500;
+			font-size: 1.3rem;
+			font-size: 1.2rem;
+			font-style: italic;
+			border: 1px solid var(--color-text);
+			padding: 1rem;
+			padding: 2rem;
+			margin-block:0rem;
+		}
+		>:nth-child(3){
+			font-family: 'Bugrino',sans-serif;
+			font-weight: 500;
+			font-size: 1.3rem;
+			font-size: 1.2rem;
+			font-style: italic;
+			border: 1px solid var(--color-text);
+			padding: 2rem;
+			margin-block:0rem;
+		}
+		>:nth-child(4){
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 100;
+			text-align: center;
+			border: 1px solid var(--color-text);
+				padding: 1rem;
+				margin-block:0rem;	}
