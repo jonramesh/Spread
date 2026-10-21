@@ -947,6 +947,16 @@ footer{
 			font-weight: 800;
 			padding-inline: 1.5rem;
 			border:1px solid var(--color-text);
+
+			@media(width > 800px){
+
+				font-size:4rem;
+
+
+
+
+
+			}
 		}
 
 
