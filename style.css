@@ -508,7 +508,9 @@ article{
 }
 
 #quote{
-
+	display:flex;
+	gap:0px;
+	flex-direction:column;
 	>:first-child{
 		font-family: 'Bugrino',sans-serif;
 		font-weight: 500;
@@ -516,6 +518,7 @@ article{
 		font-style: italic;
 		border: 1px solid var(--color-text);
 		padding: 1rem;
+		margin-block:0rem;
 	}
 
 	>:nth-child(2){
@@ -525,6 +528,7 @@ article{
 		font-style: italic;
 		border: 1px solid var(--color-text);
 		padding: 1rem;
+		margin-block:0rem;
 	}
 
 	>:nth-child(3){
@@ -534,6 +538,7 @@ article{
 		font-style: italic;
 		border: 1px solid var(--color-text);
 		padding: 1rem;
+		margin-block:0rem;
 	}
 }
 
