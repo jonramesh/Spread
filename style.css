@@ -812,7 +812,7 @@ article{
 	display:grid;
 	grid-template-columns:repeat(2,1fr);
 	row-gap:3cap;
-	column-gap: 3cap;
+	column-gap: 1cap;
 	margin-block-start:2rlh;
 
 	grid-template-areas:
@@ -841,7 +841,7 @@ article{
 
 
 		>label{
-		font-size:1.3rem;
+		font-size:1rem;
 		font-family:'Bugrino',sans-serif;
 		font-weight:500;
 		padding-inline-start: 0.5rem;
@@ -1025,12 +1025,25 @@ footer{
 	padding-block-end:.5rlh;
 
 	display:flex;
-	justify-content: space-between;
-	padding-inline:4rem;
+	justify-content: center;
+	align-items:center;
+	padding-inline:1.5rem;
+
+		>section{
+
+			display:flex;
+			flex-direction:column;
+			flex-basis:100%;
+			align-items:space-around;
+			@media(width>800px){
+				flex-direction:row;
+				justify-content:space-between;
 
 
+			}
 
 	>.designers-column{
+
 
 		>p{
 
@@ -1042,15 +1055,18 @@ footer{
 
 		>:first-child{
 			font-style:italic;
+			color: var(--color-background);
 		}
 
 		>:not(:first-child){
 			font-size: 1.25rem;
 		}
 
+		}
+
+
+
 	}
-
-
 
 }
 
