@@ -127,11 +127,16 @@ nav{
 
 	border-block-end:1px solid  var(--color-text) ;
 
+	position:sticky;
+	inset-block-start: 0;
+	background-color: var(--color-background);
 
 	padding-inline-start:.75rlh;
 	padding-inline-end:.75rlh;
 	display: flex;
 	justify-content:center;
+
+
 	>details{
 
 
