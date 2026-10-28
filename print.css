@@ -92,10 +92,6 @@
 		break-before: page;
 	}
 
-	.breakpoint2{
-		break-before: auto;
-	}
-
 	.breakpoint3{
 		break-before: page;
 	}
