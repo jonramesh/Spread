@@ -334,15 +334,15 @@ article{
 		grid-area:body;
 		margin-inline:.5rem;
 
-
+		 padding-block-end: 2rlh;
 		@media(width>800px){
 		border-inline-end: 1px solid  var(--color-text) ;
 		border-inline-start: 1px solid  var(--color-text) ;
 
 		}
 		@media(width >=1360px){
-			margin-inline-start: 0rlh;
-			border-inline-start: none ;
+
+
 
 		}
 
@@ -350,10 +350,11 @@ article{
 		>.article-section{
 			display:grid;
 			row-gap:4rlh;
+			padding-block-start:2rlh;
 
 
 			>hgroup{
-				margin-block-start: 4rlh;
+
 				border-block-end: 1px solid  var(--color-text) ;
 				border-block-start: 1px solid  var(--color-text) ;
 
@@ -369,11 +370,11 @@ article{
 
 			>.article-text{
 				display:grid;
-				row-gap:1rlh;
+				row-gap:2.5rlh;
 				@media( width > 800px){
 
 
-				padding-inline-start:4cap;
+				padding-inline-start:1rlh;
 				padding-inline-end:4cap;
 
 				margin-inline-end: 0rlh;
@@ -391,6 +392,11 @@ article{
 
 		}
 	}
+
+.article-image{
+
+	margin-block:2.5rlh;
+}
 
 
 #snoopy-image{
@@ -756,14 +762,8 @@ article{
 	grid-template-columns:repeat(2,1fr);
 	row-gap:3cap;
 	column-gap: 1cap;
-	margin-block-start:2rlh;
 
-	grid-template-areas:
-	'brand' 'brand'
-	'brand' 'brand'
-	'brand' 'brand'
-	'brand' 'brand'
-	'brand' 'brand';
+
 
 	@media( width > 800px){
 
@@ -771,10 +771,7 @@ article{
 		row-gap: 3cap;
 		column-gap: 3cap;
 
-		grid-template-areas:
-		'brand' 'brand' 'brand'
-		'brand' 'brand' 'brand'
-		'brand'  'brand' 'brand';
+
 	}
 
 	>section{
@@ -813,15 +810,15 @@ article{
 #text-image{
 
     display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:1fr 1fr;
+    grid-template-columns: auto auto;
+    grid-template-rows:auto auto;
 
 	>#word-hierarchy{
 
 		display:flex;
 		flex-direction:column;
 		font-family: 'Bugrino',sans-serif;
-		margin-block-start: 2rem;
+
 
 		grid-column:1;
 		grid-row:1;
@@ -852,7 +849,7 @@ article{
 		display:flex;
 		flex-direction:column;
 		font-family: 'Bugrino',sans-serif;
-		margin-block-start: 2rem;
+
 
 		grid-column:2;
 		grid-row:1;
@@ -915,7 +912,7 @@ article{
 
 /* 4 box by putting border to all nth-child */
 #quote{
-
+	padding-block:2rlh;
 	flex-direction:column;
 
 		>:first-child{
