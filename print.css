@@ -20,16 +20,16 @@
 	}
 
 	*{
-		background:transparent;
+		background-color:var(--color-background);
 		color:black;
 	}
 	html{
-		background: white
+		background-color:var(--color-background);
 
 	}
 
 	body{
-          background: white
+          background-color: var(--color-background);
 
 	}
 	nav{
@@ -40,7 +40,7 @@
 
 		color:black;
 		>#heading{
-			background: white;
+			background-color: var(--color-background);;
 			>h1{
 
 				color:black;
