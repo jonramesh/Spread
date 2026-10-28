@@ -67,8 +67,8 @@
 		color:black;
 		border-color:black;
 	}
-	#article-image{
-		margin-block:2.25rlh;
+	.article-image{
+		margin-block:1.5rlh;
 
 
 	}
@@ -89,6 +89,9 @@
 	}
 
 	.breakpoint1{
+		break-before: page;
+	}
+	#breakpoint2{
 		break-before: page;
 	}
 
