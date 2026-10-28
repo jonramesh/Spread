@@ -182,7 +182,7 @@ nav{
             grid-template-columns:repeat(8,auto);
             grid-template-rows:repeat(4,auto);
             padding-block-end:1rlh;
-            height: 40vh;
+            height: 50vh;
             padding-inline:.5rem;
             padding-block:2rlh;
 
@@ -966,7 +966,7 @@ article{
 
 
 
-	footer{
+		.designer {
             height:30vh;
             display:flex;
             justify-content:center;
