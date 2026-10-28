@@ -965,28 +965,6 @@ article{
 		}
 
 
-
-		.designer {
-            height:30vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            background-color:var(--color-text);
-
-
-         >span{
-				transform: translateY(3rem);
-        	>p{
-            	font-size: clamp(2.25rem, 20vw, 17rem);
-           		font-family:"Bugrino";
-            	letter-spacing:-.1em;
-            	color:var(--color-background);
-           	  }
-            }
-
-
-
-        }
 		/* only works when written checked */
 		:root:has(#American-online:checked){
 
@@ -1039,3 +1017,25 @@ article{
             --color-background:#1a1a1a;
         }
 
+
+		.designers {
+            height:30vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background-color:var(--color-text);
+
+
+         >span{
+				transform: translateY(3rem);
+        	>p{
+            	font-size: clamp(2.25rem, 20vw, 17rem);
+           		font-family:"Bugrino";
+            	letter-spacing:-.1em;
+            	color:var(--color-background);
+           	  }
+            }
+
+
+
+        }
