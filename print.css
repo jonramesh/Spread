@@ -79,11 +79,6 @@
 
 	}
 
-	.designers{
-
-		break-before:page;
-
-	}
 
 
 	.article-image{
@@ -104,7 +99,7 @@
 
 	.designers{
 		background-color: var(--color-background);
-	
+
 
 
 		span{
