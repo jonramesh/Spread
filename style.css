@@ -1,24 +1,26 @@
 
 
+
 :root{
 
-	font-size: 20px;
-	--size-h1: 2rem;
-	--size-h2:1.75rem;
-	--size-p:1rem;
-	--color-background:#BAE8FF;
-	--color-text:#FF0001;
-	--leading: 2cap;
-	--size-logo:1rem;
-	line-height: var(--leading);
+    /* make it browser defaut 16px, make it a percentage( look into it ) */
+    font-size: 125%;
+    --size-h1: clamp(1.25rem, 3vw, 3rem);
+    --size-h1-xl: clamp(2.25rem, 15vw, 17rem);
+    --size-h2:1.5rem;
+    --size-p:1rem;
+    --color-background:#BAE8FF;
+    --color-text:#FF0001;
+    --leading: 2cap;
+    --size-logo:1rem;
+    line-height: var(--leading);
+/* starting smaller in mobile as your fac eis closer to the screen */
+
+        @media(width >=1360px){
+            font-size:24px;
 
 
-		@media(width >=1360px){
-			font-size:24px;
-
-
-		}
-
+        }
 }
 
 *{
@@ -76,22 +78,28 @@ html{
 
 h1{
 
-	font-size:var(--size-h1);
-	font-family:'Bugrino',sans-serif;
-	font-weight:600;
-	text-box: trim-both cap alphabetic;
-	line-height:1.5cap;
-	margin-block-end:1rlh;
+    font-size:var(--size-h1);
+    font-family:'Bugrino',sans-serif;
+    font-weight:600;
+    text-box: trim-both cap alphabetic;
+    line-height:1.5cap;
+    color:var(--color-background);
+
+}
+.big{
+
+    font-size:var(--size-h1-xl);
 
 }
 
+
 h2{
-	font-size:var(--size-h2);
-	font-family: 'Bugrino', sans-serif;
-	font-weight:400;
-	text-box: trim-both cap alphabetic;
-	margin-block-end:1cap;
-	margin-block-start:1cap;
+    font-size:var(--size-h2);
+    font-family: 'Bugrino', sans-serif;
+    font-weight:400;
+    text-box: trim-both cap alphabetic;
+    margin-block-end:1cap;
+    margin-block-start:1cap;
 
 
 }
@@ -118,6 +126,8 @@ nav{
 
 
 	border-block-end:1px solid  var(--color-text) ;
+
+
 	padding-inline-start:.75rlh;
 	padding-inline-end:.75rlh;
 	display: flex;
@@ -125,8 +135,10 @@ nav{
 	>details{
 
 
-
-
+		border-inline:1px solid  var(--color-text) ;
+		padding-block:.75rlh;
+		padding-inline-start:.75rlh;
+		padding-inline-end:.75rlh;
 		>summary{
 			text-align: center;
 			line-height: 2rem;
@@ -159,34 +171,55 @@ nav{
 }
 
 #heading-container{
+        >#heading{
+            background-color:var(--color-text);
+            display:grid;
+            grid-template-columns:repeat(8,auto);
+            grid-template-rows:repeat(4,auto);
+            padding-block-end:1rlh;
+            height: 40vh;
+            padding-inline:.5rem;
+            padding-block:2rlh;
 
-	#heading{
-		background-color:var(--color-text);
-		display:grid;
-		grid-template-columns: repeat(8,auto);
-		grid-template-rows: repeat(4,auto);
+            @media(width>= 800px){
+                height: 60vh;
 
+            }
+            @media(width>= 1360px){
+                height: 70vh;
 
+            }
 
-		>:first-child{
-			text-align: start;
-			grid-column:1/5;
-			grid-row:1;
-		}
+            > :first-child{
+                text-align: start;
+                grid-column:1/5;
+                grid-row:1;
+                text-align:start;
+            }
 
+            >:nth-child(2){
+                text-align: end;
+                grid-column:1/9;
+                grid-row:2;
+                text-align:start;
+            }
 
+            >:nth-child(3){
+                text-align: end;
+                grid-column:2/9;
+                grid-row:3;
+                text-align:end;
+            }
+            >:nth-child(4){
+                text-align: end;
+                grid-column:6/-1;
+                grid-row:4;
+            }
 
-		@media( width > 800px){
+        }
 
+    }
 
-
-			}
-
-
-		}
-
-
-}
 
 
 #identifier{
@@ -243,7 +276,7 @@ article{
 	display:grid;
 	grid-template-columns:repeat(4,1fr);
 	row-gap:0rcap;
-	margin-block-end: 2rlh;
+
 	border-block-end:1px solid  var(--color-text) ;
 
 
@@ -254,17 +287,8 @@ article{
 
 
 
-	margin-inline-start:.75rlh;
-	margin-inline-end:.75rlh;
-
-		@media(width >=1360px){
-			margin-inline-start:2rlh;
-			margin-inline-end:2rlh;
 
 
-
-
-		}
 
 
 
@@ -303,6 +327,7 @@ article{
 		display:grid;
 		row-gap:3rcap;
 		grid-area:body;
+		margin-inline:.5rem;
 
 
 		@media(width>800px){
