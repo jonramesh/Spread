@@ -141,7 +141,7 @@ nav{
 
 
 		border-inline:1px solid  var(--color-text) ;
-		padding-block:.75rlh;
+		padding-block:.25rlh;
 		padding-inline-start:.75rlh;
 		padding-inline-end:.75rlh;
 		>summary{
