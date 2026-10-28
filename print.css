@@ -47,14 +47,20 @@
 
 			}
 			>.big{
-				font-size:4rem;
+				font-size:6rem;
 
 			}
 		}
 	}
 
+	article{
+		border-block-end:1px solid  var(--color-background) ;
 
+	}
 
+	#snoopy-image{
+		--box-side:8rem;
+	}
 
 
 
@@ -95,22 +101,21 @@
 		break-before: page;
 	}
 
-	.breakpoint3{
-		break-before: page;
-	}
 
-	.breakpoint4{
-		break-before: auto;
+	.designers{
+		background-color: var(--color-background);
+	
+
+
+		span{
+
+			p{
+				color:var(--color-text) ;
+
+			}
+		}
 	}
 
 }
 
-	.designers{
-		background-color: var(--color-background);
-		span{
-			p{
-				color:var(--color-text) ;
-			}
-		}
-	}
 

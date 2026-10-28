@@ -5,8 +5,8 @@
 
     /* make it browser defaut 16px, make it a percentage( look into it ) */
     font-size: 125%;
-    --size-h1: clamp(1.25rem, 3vw, 3rem);
-    --size-h1-xl: clamp(2.25rem, 15vw, 17rem);
+    --size-h1: clamp(1rem, 3vw, 3rem);
+    --size-h1-xl: clamp(2rem, 15vw, 17rem);
     --size-h2:1.5rem;
     --size-p:1rem;
     --color-background:#BAE8FF;
@@ -297,6 +297,7 @@ article{
 
 
 
+
 		@media (width >= 800px) {
 			grid-template-columns:repeat(8,1fr);
 			column-gap:0rcap;
@@ -304,6 +305,7 @@ article{
 			'head head head head head head head head'
 			'info info info body body body body body'
 			'info info info body body body body body';
+
 
 
 	}
@@ -314,6 +316,7 @@ article{
 			'head head head head head head head head head head head head'
 			'info info info  info info body body body body body body body'
 			'info info info info info body body  body body body body body';
+
 
 	}
 
@@ -939,6 +942,7 @@ article{
 			margin-block:0rem;
 		}
 		>:nth-child(3){
+
 			font-family: 'Bugrino',sans-serif;
 			font-weight: 500;
 			font-size: 1.2rem;
@@ -960,69 +964,15 @@ article{
 
 		}
 
-.designers{
-
-	background-color:var(--color-text);
-	padding-block-start: .5rlh;
-	padding-block-end:.5rlh;
-
-	display:flex;
-	justify-content: center;
-	align-items:center;
-	padding-inline:1.5rem;
-	overflow: hidden;
-
-		>section{
-
-			display:flex;
-			flex-direction:column;
-			flex-basis:100%;
-			align-items:space-around;
-			@media(width>800px){
-				flex-direction:row;
-				justify-content:space-between;
 
 
-			}
-
-	>.designers-column{
-
-
-		>p{
-
-		color: var(--color-background);
-		font-family: Arial, Helvetica, sans-serif;
-		text-align:start;
-
-		}
-
-		>:first-child{
-			font-style:italic;
-			color: var(--color-background);
-		}
-
-		>:not(:first-child){
-			font-size: 1.25rem;
-		}
-
-		}
-
-
-
-
-
-
-
-	}
-
-}
-
-	.designers{
+	footer{
             height:30vh;
             display:flex;
             justify-content:center;
             align-items:center;
             background-color:var(--color-text);
+
 
          >span{
 				transform: translateY(3rem);
