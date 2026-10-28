@@ -120,6 +120,7 @@ nav{
 	border-block-end:1px solid  var(--color-text) ;
 	padding-inline-start:.75rlh;
 	padding-inline-end:.75rlh;
+
 	@media (width >= 1360px) {
 
 		padding-inline-start:2rlh;
@@ -164,156 +165,32 @@ nav{
 
 #heading-container{
 
+	#heading{
+		background-color:var(--color-text);
+		display:grid;
+		grid-template-columns: repeat(8,auto);
+		grid-template-rows: repeat(4,auto);
+
+
+
+		>:first-child{
+			text-align: start;
+			grid-column:1/5;
+			grid-row:1;
+		}
+
+
+
 		@media( width > 800px){
 
-			border-inline-start: 1px solid  var(--color-text) ;
-			border-inline-end: 1px solid  var(--color-text) ;
-
-			}
-
-
-
-
-	#heading-sticky{
-		position: sticky;
-		inset-block-start:1rlh;
-
-		#heading{
-
-				@media( width > 800px){
-
-
-						margin-inline-start: 1rlh;
-				margin-inline-end: 1rlh;
-
-				}
-
-			> :first-child{
-				text-align: start;
-
-			}
-			>:nth-child(2){
-				text-align: end;
 
 
 			}
-			>#author{
-				text-align:end;
-				margin-block-end:1cap;
-
-			}
-			>time{
-				text-align:end;
-			}
-
-		}
-		>#identifier{
-			margin-block-start:2rlh;
-
-			display:grid;
-			grid-template-columns:repeat(2,1fr);
-
-
-
-
-
-			justify-content: space-between;
-
-			border-block-start: 1px solid  var(--color-text) ;
-			padding-inline: .75rem;
-
 
 
 		}
-		>details{
-			border-block-start: 1px solid  var(--color-text) ;
-			border-block-end: 1px solid  var(--color-text) ;
-			background-color:var(--color-text);
-			padding-block-start: .5rlh;
-			padding-block-end:.5rlh;
-
-			font-family: 'Bugrino', sans-serif;
-			font-weight:400;
-			color:#BAE8FF;
-			text-align:center;
-			font-size:1rem;
-
-				>ol{
-						li{
-						border-block-start: 1px solid  var(--color-background) ;
-						text-align:start;
-						margin-block-start:.5rlh;
-						padding-inline-start: 1rem;
-						padding-block-start: 1rem;
-
-						color:var(--color-background);
-					}
 
 
-				}
-
-
-
-				>summary{
-					color:var(--color-background);
-					text-align:center;
-					font-size:1.25rem;
-
-
-
-				}
-
-
-
-
-			}
-			>#identifier{
-				display:grid;
-
-				grid-template-areas:
-				'author-label author'
-				'date-label date';
-
-
-
-				>#author-label{
-
-					grid-area:author-label;
-					font-weight:500;
-
-
-				}
-				>#author{
-					grid-area:author;
-					font-family: 'Bugrino';
-
-
-
-
-
-				}
-				>#date-label{
-					grid-area:date-label;
-					font-weight:500;
-
-				}
-				>#date{
-					p{
-
-					grid-area:date;
-					font-family: 'Bugrino', sans-serif;
-
-					}
-
-
-				}
-
-
-
-
-
-		}
-	}
 }
 
 
@@ -330,6 +207,7 @@ article{
 
 	grid-template-areas:
 	'head head head head'
+	'info info info info'
 	'body body body body';
 
 
@@ -352,8 +230,9 @@ article{
 			grid-template-columns:repeat(8,1fr);
 			column-gap:0rcap;
 			grid-template-areas:
-			'head head head body body body body body'
-			'head head head body body body body body';
+			'head head head head head head head head'
+			'info info info body body body body body'
+			'info info info body body body body body';
 
 
 	}
