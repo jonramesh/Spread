@@ -86,7 +86,21 @@
 			break-inside:avoid;
 	}
 
+	.breakpoint1{
+		break-before: page;
+	}
 
+	.breakpoint2{
+		break-before: auto;
+	}
+
+	.breakpoint3{
+		break-before: page;
+	}
+
+	.breakpoint4{
+		break-before: auto;
+	}
 
 
 }
