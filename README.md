@@ -15,7 +15,7 @@ Demo/template for our [second projects](https://typography-interaction-2627.gith
 # Why we chose this Design
 > Throughout the readings, the authors discuss branding, graphic design, and real-world brand logos while showing examples of grid templates, images, and white space. Inspired by these visual concepts, we decided to frame our website around a "Grid + Branding" concept.
 >To reflect this, we used solid and dashed lines to visually expose the grid system of the layout. For the branding element, we created radio buttons that allowed users to change the entire website's color palette to match the specific brand colors featured in the article.
->We specifically chose red and sky blue as the primary colors for our website to serve both a structural and a branding purpose. Red represents the sharp, structural precision of the grid lines, while sky blue provides a cool, dynamic background that emphasizes the white space and imagery. Together, this bold contrast establishes a strong brand identity before the user interacts with the radio buttons to switch to other brand palettes featured in the reading.
+>We chose red and sky blue as the primary colors for our website to serve both a structural and a branding purpose. Red represents the sharp, structural precision of the grid lines, while sky blue provides a cool, dynamic background that emphasizes the white space and imagery. Together, this bold contrast establishes a strong brand identity before the user interacts with the radio buttons to switch to other brand palettes featured in the reading.
 
 
 
