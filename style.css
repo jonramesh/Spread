@@ -86,6 +86,7 @@ h1{
     color:var(--color-background);
 
 }
+/*--h1 but the bigger text--*/
 .big{
 
     font-size:var(--size-h1-xl);
@@ -120,7 +121,7 @@ p{
 article{
 
 	display:grid;
-	grid-template-columns:repeat(4,1fr);
+	grid-template-columns:repeat(4,1fr); /*--4 columns for mobile--*/
 	row-gap:0rcap;
 
 	border-block-end:1px solid  var(--color-text) ;
@@ -140,7 +141,7 @@ article{
 
 
 		@media (width >= 800px) {
-			grid-template-columns:repeat(8,1fr);
+			grid-template-columns:repeat(8,1fr); /*--8 columns for desktop--*/
 			column-gap:0rcap;
 			grid-template-areas:
 			'head head head head head head head head'
@@ -151,7 +152,7 @@ article{
 
 	}
 		@media(width >=1360px){
-			grid-template-columns:repeat(12,1fr);
+			grid-template-columns:repeat(12,1fr); /*--12 columns for computer--*/
 			column-gap:0rcap;
 			grid-template-areas:
 			'head head head head head head head head head head head head'
@@ -167,6 +168,7 @@ article{
 
 
 
+/*--------Table of Contents-------*/
 
 nav{
 
@@ -320,7 +322,7 @@ nav{
 
 
 
-
+/*--whole part for 5 h2 and 5 paragraph--*/
 	#article-body{
 		display:grid;
 		row-gap:3rcap;
@@ -340,7 +342,7 @@ nav{
 
 		}
 
-
+/*--section for 1 h2 and 1 paragraph--*/
 		>.article-section{
 			display:grid;
 			row-gap:4rlh;
@@ -362,6 +364,7 @@ nav{
 
 			}
 
+/*--section for each paragraph--*/
 			>.article-text{
 				display:grid;
 				row-gap:2.5rlh;
@@ -399,7 +402,7 @@ nav{
 
 
 
-/*-------- Quote --------------- */
+/*-------- Quote -------- */
 
 /* 4 box by putting border to all nth-child */
 #quote{
