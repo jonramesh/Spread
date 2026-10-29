@@ -205,6 +205,7 @@ nav{
             padding-block-end: 0.5rlh;
             text-align: center;
             border-block-start: 1px dashed var(--color-text);
+			font-family: 'Bugrino', sans-serif;
 			}
 		}
 		}
@@ -403,7 +404,7 @@ nav{
 /* 4 box by putting border to all nth-child */
 #quote{
 	padding-block:2rlh;
-	flex-direction:column;
+	flex-direction:column; /*--vertical--*/
 
 		>:first-child{
 			font-family: 'Bugrino',sans-serif;
@@ -498,15 +499,6 @@ nav{
 
 
 		}
-	}
-
-	>p{
-		font-size:1.3rem;
-		font-family:'Bugrino',sans-serif;
-		font-weight:500;
-		border-block-start: 3px solid var(--color-text);
-
-
 	}
 
 
