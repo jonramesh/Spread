@@ -14,7 +14,7 @@
     --leading: 2cap;
     --size-logo:1rem;
     line-height: var(--leading);
-/* starting smaller in mobile as your fac eis closer to the screen */
+/* starting smaller in mobile as your face is closer to the screen */
 
         @media(width >=1360px){
             font-size:24px;
@@ -580,7 +580,7 @@ nav{
 
 
 
-/* 2 column grid for word-hierarchy */
+/*--2 column grid for word-hierarchy--*/
 #text-image{
 
     display:grid;
@@ -590,7 +590,7 @@ nav{
 	>.word-hierarchy{
 
 		display:flex;
-		flex-direction:column;
+		flex-direction:column; /*--vertical--*/
 		font-family: 'Bugrino',sans-serif;
 
 
@@ -628,7 +628,7 @@ nav{
 	}
 
 
-	/* big-moment is the two-lined box */
+	/*--the text with two-lined box--*/
 	>#big-moment{
 
 
@@ -668,10 +668,10 @@ nav{
 
 
 
-/*---------- the foooter------------------- */
+/*---------- the foooter------------ */
 
 		.designers {
-            height:30vh;
+            height:30vh; /*--viewpoint height--*/
             display:flex;
             justify-content:center;
             align-items:center;
@@ -694,7 +694,7 @@ nav{
         }
 
 
-
+		/*--the radiobuttons--*/
 		/* only works when written checked */
 		:root:has(#American-online:checked){
 

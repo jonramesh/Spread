@@ -90,26 +90,26 @@
 	}
 
 	.breakpoint1{
-		break-before: page;
+		break-before: page; /*--p--*/
 	}
 	#breakpoint2{
-		break-before: page;
+		break-before: page; /*--for the 4th h2--*/
 	}
 
 	.breakpoint3{
-		break-before: page;
+		break-before: page; /*--p--*/
 	}
 
 	.breakpoint4{
-		break-before: page;
+		break-before: page; /*--p--*/
 	}
 
 	.breakpoint5{
-		break-before: page;
+		break-before: page; /*--p--*/
 	}
 
 	.breakpoint6{
-		break-before: page;
+		break-before: page; /*--p--*/
 	}
 
 
