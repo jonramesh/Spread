@@ -361,8 +361,11 @@ _____
 
 			}
 		}
+# What I learned
 
+>Throughout the process, I learned more about communication and responsibility. Because there were only two of us and we had to do it together, every line of code I wrote and every design decision I made directly impacted my partner’s workflow. Knowing that my work was the foundation for theirs motivated me to be more thorough and meet our deadlines consistently. For the codes, trying to have a responsive website made me basically learn a lot about the grid systems and flex box.
 
+> I learned alot about compromise and accomedating someone elses schedule so the dynemic is not alays on oly one persons time. We also came from differet skill levels but we ended up being able to teach other alot of things and be open to feedback from your partner allows both of you to grow as you complete this project. I can remember the large amont of small mistakes I made that would have eaten up alot of time but having someone else there to review and correct those mistakes makes things more efficent. Overall this was a realy great leanring experience as I was both had to understad and be able to expain those conepts to someone else,instead of leaving them in my own headspace.
 
 `
 
