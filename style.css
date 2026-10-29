@@ -2,6 +2,21 @@
 
 
 :root{
+	/*
+	>In this code we used a 125% for the root font size becuase of the default font-size of most browsers being 16px
+	we wanted out to be 20px.we used this base for all out spacing though the rem ad rlh property. rem is used for both
+	the font-size to create a consistent relationship between all sizes. This is transferedto the inline sizing so all horiatal
+	spacing cotiues the relationship. Than we used rlh becuase we wanted to taking the base line height and use that for all out
+	 vertical spacing so that we a vertical rythm amoungst all our elements.
+	*/
+
+
+
+
+
+
+
+
 
     /* make it browser defaut 16px, make it a percentage( look into it ) */
     font-size: 125%;
@@ -14,7 +29,29 @@
     --leading: 2cap;
     --size-logo:1rem;
     line-height: var(--leading);
-/* starting smaller in mobile as your face is closer to the screen */
+
+	 /* vertical spacing using root line height to preserve vertical ryhthm */
+	--space-block-xs:.25rlh;
+	--space-block-s:.5rlh;
+	--space-block-m:1rlh;
+	--space-block-l:2rlh;
+
+
+	 /*Horizontal spacing using rem to preserve Horizontal consistency */
+
+	--space-inline-xs:.5rem;
+	--space-inline-s:.75rem;
+	--space-inline-m:1rem;
+	--space-inline-l:1.5rem;
+	--space-inline-xl:2rem;
+
+	 /*Fonts */
+
+	 --font-bugrino:'Bugrino', sans-serif;
+	 --font-sans-serif:'Arial', sans-serif;
+
+
+    /* starting smaller in mobile as your face is closer to the screen */
 
         @media(width >=1360px){
             font-size:24px;
@@ -178,8 +215,8 @@ nav{
 	inset-block-start: 0;
 	background-color: var(--color-background);
 
-	padding-inline-start:.75rlh;
-	padding-inline-end:.75rlh;
+	padding-inline-start:var(--space-inline-s);
+	padding-inline-end:var(--space-inline-s);
 	display: flex;
 	justify-content:center;
 
@@ -188,9 +225,9 @@ nav{
 
 
 		border-inline:1px solid  var(--color-text) ;
-		padding-block:.25rlh;
-		padding-inline-start:.75rlh;
-		padding-inline-end:.75rlh;
+		padding-block:var(--space-inline-xs);
+		padding-inline-start:var(--space-inline-s);;
+		padding-inline-end:var(--space-inline-s);;
 
 		>summary{
 			text-align: center;
@@ -203,25 +240,29 @@ nav{
 
 			>li{
 			line-height: 1rem;
-			padding-block-start: 0.5rlh;
-            padding-block-end: 0.5rlh;
+			padding-block-start: var(--space-inline-xs);
+            padding-block-end: var(--space-inline-xs);;
             text-align: center;
             border-block-start: 1px dashed var(--color-text);
 			font-family: 'Bugrino', sans-serif;
+
+					>a{
+						text-decoration:none;
+					}
 			}
 		}
 		}
 
 	@media (width >= 1360px) {
 
-		padding-inline-start:2rlh;
-		padding-inline-end:2rlh;
+		padding-inline-start:var(--space-inline-l);
+		padding-inline-end:var(--space-inline-l);
 
 	}
 
 
 }
-
+/*--------heading container-------*/
 #heading-container{
 	grid-area:head;
         >#heading{
@@ -229,10 +270,10 @@ nav{
             display:grid;
             grid-template-columns:repeat(8,auto);
             grid-template-rows:repeat(4,auto);
-            padding-block-end:1rlh;
+            padding-block-end:var(--space-block-m);
             height: 50vh;
-            padding-inline:.5rem;
-            padding-block:2rlh;
+            padding-inline:var(--space-block-xs);
+            padding-block:var(--space-block-l);
 
             @media(width>= 800px){
                 height: 60vh;
@@ -248,6 +289,8 @@ nav{
                 grid-column:1/9;
                 grid-row:1;
                 text-align:start;
+
+				align-self:end;
             }
 
             >:nth-child(2){
@@ -255,6 +298,7 @@ nav{
                 grid-column:1/9;
                 grid-row:2;
                 text-align:start;
+				align-self:center;
             }
 
             >:nth-child(3){
@@ -262,6 +306,7 @@ nav{
                 grid-column:2/9;
                 grid-row:3;
                 text-align:end;
+				align-self:center;
             }
             >:nth-child(4){
                 text-align: end;
@@ -273,7 +318,7 @@ nav{
 
     }
 
-
+/*--------The data and author identifier-------*/
 
 	#identifier{
 
@@ -289,7 +334,7 @@ nav{
                 font-family: 'Bugrino';
                 border-block-end:1px dashed  var(--color-text) ;
                 padding-block:1em;
-                padding-inline:.75rem;
+                padding-inline:.75em;
                     p{
                         color:var(--color-text) ;
 						font-family: Arial, Helvetica, sans-serif;
@@ -325,10 +370,12 @@ nav{
 /*--whole part for 5 h2 and 5 paragraph--*/
 	#article-body{
 		display:grid;
+		/*This allows auto sizing for al the child elements in the grid when stack into rows. This is on be deault by wated to explicitly state it--*/
+		grid-auto-rows:auto;
 		row-gap:3rcap;
 		grid-area:body;
-		padding-block-end: 2rlh;
-		padding-inline: .5rem;
+		padding-block-end: var(--space-block-l);
+		padding-inline: var(--space-inline-xs);
 
 		@media(width>800px){
 
@@ -345,8 +392,9 @@ nav{
 /*--section for 1 h2 and 1 paragraph--*/
 		>.article-section{
 			display:grid;
-			row-gap:4rlh;
-			padding-block-start:2rlh;
+			grid-auto-rows:auto;
+			row-gap:var(--space-block-xl);
+			padding-block-start:var(--space-block-l);
 
 
 			>hgroup{
@@ -367,13 +415,15 @@ nav{
 /*--section for each paragraph--*/
 			>.article-text{
 				display:grid;
-				row-gap:2.5rlh;
+				row-gap:var(--space-block-l);
+				margin-block-start:var(--space-block-l);
 				@media( width > 800px){
 
 
 				padding-inline:4cap;
 
 				margin-inline-end: 0rlh;
+				margin-block-start:var(--space-block-l)
 
 				}
 
@@ -406,41 +456,40 @@ nav{
 
 /* 4 box by putting border to all nth-child */
 #quote{
-	padding-block:2rlh;
+	padding-block:var(--space-block-l);
 	flex-direction:column; /*--vertical--*/
 
 		>:first-child{
 			font-family: 'Bugrino',sans-serif;
 			font-weight: 500;
-			font-size: 1.2rem;
+			font-size: 1rem;
 			font-style: italic;
 			border-block-start: 1px solid var(--color-text);
 			border-block-end: 1px dashed var(--color-text);
 			border-inline: 1px solid var(--color-text);
-			padding: 1rem;
-			padding: 2rem;
+			padding: var(--space-inline-xl);
 			margin-block:0rem;
 		}
 		>:nth-child(2){
 			font-family: 'Bugrino',sans-serif;
 			font-weight: 500;
-			font-size: 1.2rem;
+			font-size: 1rem;
 			font-style: italic;
 			border-block-end: 1px dashed var(--color-text);
 			border-inline: 1px solid var(--color-text);
-			padding: 1rem;
-			padding: 2rem;
+
+			padding: var(--space-inline-xl);
 			margin-block:0rem;
 		}
 		>:nth-child(3){
 
 			font-family: 'Bugrino',sans-serif;
 			font-weight: 500;
-			font-size: 1.2rem;
+			font-size: 1rem;
 			font-style: italic;
 			border-block-end: 1px dashed var(--color-text);
 			border-inline: 1px solid var(--color-text);
-			padding: 2rem;
+			padding: var(--space-inline-xl);
 			margin-block:0rem;
 		}
 		>:nth-child(4){
@@ -449,7 +498,7 @@ nav{
 			text-align: center;
 			border-block-end: 1px solid var(--color-text);
 			border-inline: 1px solid var(--color-text);
-			padding: 1rem;
+			padding: var(--space-inline-m);
 			margin-block:0rem;
 			}
 
@@ -461,7 +510,7 @@ nav{
 /*-------- Sets a consistent horizantal spacing for every text image so they are space evenly between the top and bottom paragraph --------------- */
 .article-image{
 
-	margin-block:2.5rlh;
+	margin-block:var(--space-block-l);
 }
 
 
@@ -490,15 +539,27 @@ nav{
 
 	>section{
 		border-block-start: 3px solid var(--color-text);
-		padding-block-start: 1rem;
+		padding-block-start: var(--space-block-m);
+
+		>input[type ="radio"]{
+
+			border-radius:100%;
+			width:.75rem;
+			height:.75rem;
+			border: 2px solid var(--color-text);
 
 
+
+		}
+		input:checked {
+  		border: 6px solid var(--color-text);
+			}
 
 		>label{
 		font-size:1rem;
 		font-family:'Bugrino',sans-serif;
 		font-weight:500;
-		padding-inline-start: 0.5rem;
+		padding-inline-start: var(--space-inline-xs)
 
 
 		}
@@ -522,8 +583,9 @@ nav{
         border: 1px solid var(--color-text);
         width:var(--box-side);
         height:var(--box-side);
-        font-size:2rem;
-        align-self:end;
+        font-size:1.25rem;
+
+		/* to align eahc cube to the bottom*/
 
         /* adding some sketches */
 
@@ -597,22 +659,22 @@ nav{
 
 
 		>:first-child{
-			margin-bottom: 1rem;
+			margin-bottom: var(--space-block-m);
 		}
 
 		>:nth-child(2){
 			font-size: 1.25rem;
-			margin-bottom: 1rem;
+			margin-bottom: var(--space-block-m);
 		}
 
 		>:nth-child(3){
 			font-size: 1.5rem;
-			margin-bottom: 1rem;
+			margin-bottom: var(--space-block-m);
 		}
 
 		>:nth-child(4){
 			font-size: 1.75rem;
-			margin-bottom: 1rem;
+			margin-bottom: var(--space-block-m);
 		}
 
 
@@ -633,16 +695,16 @@ nav{
 
 
 		grid-column:1/span 2;
-		grid-row:2;
+
 		border:1px solid var(--color-text);
-		padding: 1.5rem;
+		padding: var(--space-inline-l);
 
 
 		>:first-child{
 			font-size: 2rem;
 			font-family:'Bugrino';
 			font-weight: 800;
-			padding-inline: 1.5rem;
+			padding-inline: var(--space-inline-l);
 			border:1px solid var(--color-text);
 
 			@media(width > 800px){
@@ -668,21 +730,37 @@ nav{
 
 
 
-/*---------- the foooter------------ */
+/*---------- the foooter------------------------------- */
 
 		.designers {
-            height:30vh; /*--viewpoint height--*/
+            height:20vh; /*--viewpoint height--*/
             display:flex;
             justify-content:center;
             align-items:center;
             background-color:var(--color-text);
 			overflow:hidden;
+			@media(width > 800px){
+
+				font-size:4rem;
+
+				height:40vh;
+
+
+
+			}
 
 
          >span{
-				transform: translateY(3rem);
+				transform: translateY(8vh);
+
+
+				@media(width>800px){
+					transform: translateY(14vh);
+
+			}
+
         	>p{
-            	font-size: clamp(2.25rem, 20vw, 17rem);
+            	font-size: clamp(2.25rem, 23vw, 17rem);
            		font-family:"Bugrino";
             	letter-spacing:-.1em;
             	color:var(--color-background);
@@ -694,7 +772,7 @@ nav{
         }
 
 
-		/*--the radiobuttons--*/
+/*-----------------------the radiobuttons-----------------------*/
 		/* only works when written checked */
 		:root:has(#American-online:checked){
 

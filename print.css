@@ -58,6 +58,10 @@
 
 	}
 
+	p{
+		text-box:none;
+	}
+
 	#snoopy-image{
 		--box-side:8rem;
 	}
@@ -96,16 +100,10 @@
 		break-before: page; /*--for the 4th h2--*/
 	}
 
-	.breakpoint3{
-		break-before: page; /*--p--*/
-	}
 
-	.breakpoint4{
-		break-before: page; /*--p--*/
-	}
+	#breakpoint5{
 
-	.breakpoint5{
-		break-before: page; /*--p--*/
+		break-before:page;
 	}
 
 	.breakpoint6{
@@ -120,7 +118,7 @@
 
 
 		span{
-
+			transform:none;
 			p{
 				color:var(--color-text) ;
 				font-size: 9.25rem;
