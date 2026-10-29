@@ -96,6 +96,23 @@
 		break-before: page;
 	}
 
+	.breakpoint3{
+		break-before: page;
+	}
+
+	.breakpoint4{
+		break-before: page;
+	}
+
+	.breakpoint5{
+		break-before: page;
+	}
+
+	.breakpoint6{
+		break-before: page;
+	}
+
+
 
 	.designers{
 		background-color: var(--color-background);
