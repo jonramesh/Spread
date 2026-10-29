@@ -329,7 +329,7 @@ nav{
 		row-gap:3rcap;
 		grid-area:body;
 		padding-block-end: 2rlh;
-		padding-inline: 1rem;
+		padding-inline: .75rem;
 
 		@media(width>800px){
 
