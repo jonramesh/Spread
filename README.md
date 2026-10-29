@@ -287,7 +287,7 @@ _____
 
 `
 
->Gird auto template allows us to have the grid snap to the size of the inner contents. This allows us to have even space and consideration for each type moment. Each type moment should look evenly spaced between its paragraphs.
+>Gird auto template allows us to have the grid snap to the size of the inner contents.
 
 `
 >.word-hierarchy{

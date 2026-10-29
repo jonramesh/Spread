@@ -263,11 +263,17 @@ nav{
 
 }
 /*--------heading container-------*/
+
+
+/* Its contained in the bigger article grid no matter if its in mobile,tablet,desktop it will
+ be on the top. It used the height 40vh on mobile to keep the proportions of the text and we
+ increase it slightly to 60vh and 70vh so that it can become a bigger hero moment in desktop */
 #heading-container{
 	grid-area:head;
         >#heading{
             background-color:var(--color-text);
             display:grid;
+			/*creates 8 columns and they auto size based on the elements inside of it */
             grid-template-columns:repeat(8,auto);
             grid-template-rows:repeat(4,auto);
             padding-block-end:var(--space-block-m);
@@ -289,7 +295,8 @@ nav{
                 grid-column:1/9;
                 grid-row:1;
                 text-align:start;
-
+				/*Puts the Ronald Mcdonald to the bottom since it puts all the elements
+				at the top of the grid cels automatically*/
 				align-self:end;
             }
 
@@ -320,16 +327,24 @@ nav{
 
 /*--------The data and author identifier-------*/
 
+
+
+/*Its place in the article grid using the grid-area with the
+name info. We use flex to organize and have it stack vertically*/
 	#identifier{
 
             grid-area:info;
+			/*puts it vertcially so the author and date stack up on top of each other */
             display:flex;
             flex-direction:column;
+
 
 
             >.author{
                 display:flex;
                 flex-direction:row;
+				/*So the leemnts can always be evenly space away from each other.
+				they can stay at eahc side of the row */
                 justify-content:space-between;
                 font-family: 'Bugrino';
                 border-block-end:1px dashed  var(--color-text) ;
@@ -370,7 +385,8 @@ nav{
 /*--whole part for 5 h2 and 5 paragraph--*/
 	#article-body{
 		display:grid;
-		/*This allows auto sizing for al the child elements in the grid when stack into rows. This is on be deault by wated to explicitly state it--*/
+		/*This allows auto sizing for al the child elements in the grid when stack into rows.
+		 This is on be deault by wanted to explicitly state it--*/
 		grid-auto-rows:auto;
 		row-gap:3rcap;
 		grid-area:body;
@@ -412,9 +428,10 @@ nav{
 
 			}
 
-/*--section for each paragraph--*/
+/*--section to space each paragraphfor each paragraph--*/
 			>.article-text{
 				display:grid;
+				grid-auto-rows:auto;
 				row-gap:var(--space-block-l);
 				margin-block-start:var(--space-block-l);
 				@media( width > 800px){
@@ -518,6 +535,11 @@ nav{
 
 
 /* 2 column grid for mobile, 3 column grid for bigger */
+
+
+/* a grid which holds the stylized radio buttons it
+changes from a 2 column grid to a 1 column grid */
+
 #branding-buttons{
 
 
@@ -531,6 +553,8 @@ nav{
 	@media( width > 800px){
 
 		grid-template-columns:repeat(3,1fr);
+		/* use the cap uit becuase we want it to be spaced evely no matter the
+		measuremenet of the viewport*/
 		row-gap: 3cap;
 		column-gap: 3cap;
 
@@ -578,7 +602,8 @@ nav{
     flex-wrap:wrap;
     --box-side:10rem;
     gap:3cap;
-
+	/* We used span as containers because we felt that sematically it was more decoration
+	 so  it did not have any really semantic significance.*/
     >span{
         border: 1px solid var(--color-text);
         width:var(--box-side);
@@ -587,13 +612,17 @@ nav{
 
 		/* to align eahc cube to the bottom*/
 
-        /* adding some sketches */
+        /* The grid allows us to have overlapping elements which allows us to recreate
+		this motif. We use grid span to put all the spans in its proper space while allowing us to contain the text in the middle. */
 
         display:grid;
         grid-template-columns: 1fr 4fr 1fr;
         grid-template-rows: 1fr 2fr 7fr 2fr 1fr;
 
         >.vertical-column-1{
+		/*Each span uses grid and overlapping child spans to recreate the logo grid
+		for each word. Each span contains the dotted border which allows us to
+		recreate that grid within our work */
             grid-column:1;
             grid-row:1/span 5;
             border-inline-end:1px dashed var(--color-text);
@@ -644,6 +673,9 @@ nav{
 
 /*--2 column grid for word-hierarchy--*/
 #text-image{
+
+	/*Gird auto template allows us to have the grid snap to the size of the
+	inner contents. */
 
     display:grid;
     grid-template-columns: auto auto;
@@ -732,7 +764,12 @@ nav{
 
 /*---------- the foooter------------------------------- */
 
+/*in this footer we wanted to have a banger moment so we decided to repeat a big text moment on
+the footer */
+
 		.designers {
+			/*This allows us to have a certain percetage of the screen and have it always
+			like that no matter the screen size */
             height:20vh; /*--viewpoint height--*/
             display:flex;
             justify-content:center;
@@ -742,7 +779,7 @@ nav{
 			@media(width > 800px){
 
 				font-size:4rem;
-
+					/*Wanted to icrease it since the header moment also got taller to match the energy */
 				height:40vh;
 
 
@@ -751,6 +788,8 @@ nav{
 
 
          >span{
+			/*Push it down to get it cut off sincethis allows it to go out of the bounds and overlow the
+			parent */
 				transform: translateY(8vh);
 
 
@@ -774,7 +813,16 @@ nav{
 
 /*-----------------------the radiobuttons-----------------------*/
 		/* only works when written checked */
+
+
+
+/* inspired by Yens amazing project we decided to look into the has property and add it to
+the interaction experince of our webiste. When a company/brand was caled out we wanted to have it be able to
+change the "branding" of the webiste itself */
 		:root:has(#American-online:checked){
+
+			/* has sets a state based on wetheer or not a event occurent */
+			/* like a boolean lol*/
 
             --color-text:#FF0B00;
             --color-background:#00C4FF;
