@@ -36,6 +36,11 @@
 		display:none;
 
 	}
+
+	input{
+		display:none;
+	}
+
 	#heading-container{
 
 		color:black;
@@ -96,14 +101,18 @@
 	.breakpoint1{
 		break-before: page; /*--p--*/
 	}
+
 	#breakpoint2{
 		break-before: page; /*--for the 4th h2--*/
 	}
 
+	.breakpoint4{
+		break-before: page; /*--p--*/
+	}
 
 	#breakpoint5{
 
-		break-before:page;
+		break-before:page; /*--for the last h2--*/
 	}
 
 	.breakpoint6{

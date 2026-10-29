@@ -85,12 +85,12 @@ ______
 _______
 
 >Its a sticky navigation on top for the table of contents. Used a flex box and centered it
-> We than used a link and targeted it to the position of each heading within the article
+> We then used a link and targeted it to the position of each heading within the article
 
 ## Details
 _______
 
->The box surouded for the table of contents
+>The box surrounded for the table of contents
 
 ## Summary
 ______
