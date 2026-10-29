@@ -768,7 +768,7 @@ changes from a 2 column grid to a 1 column grid */
 the footer */
 
 		.designers {
-			/*This allows us to have a certain percetage of the screen and have it always
+			/*This allows us to have a certain percentage of the screen and have it always
 			like that no matter the screen size */
             height:20vh; /*--viewpoint height--*/
             display:flex;
@@ -779,7 +779,7 @@ the footer */
 			@media(width > 800px){
 
 				font-size:4rem;
-					/*Wanted to icrease it since the header moment also got taller to match the energy */
+					/*Wanted to increase it since the header moment also got taller to match the energy */
 				height:40vh;
 
 
@@ -788,7 +788,7 @@ the footer */
 
 
          >span{
-			/*Push it down to get it cut off sincethis allows it to go out of the bounds and overlow the
+			/*Push it down to get it cut off since this allows it to go out of the bounds and overlow the
 			parent */
 				transform: translateY(8vh);
 

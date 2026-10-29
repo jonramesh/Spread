@@ -14,7 +14,7 @@
 		 --color-background: white;
         --color-text: black;
 
-
+/*---Since our font size for web was 20px we wanted to decrease it a little----*/
 		font-size:16px;
 
 	}
@@ -32,11 +32,15 @@
           background-color: var(--color-background);
 
 	}
+
+/*----table of contents not needed in print since not able to press it so displayed to none-----*/
+
 	nav{
 		display:none;
 
 	}
 
+/*----branding buttons not needed in print since not able to press it so displayed to none-----*/
 	input{
 		display:none;
 	}
@@ -58,6 +62,7 @@
 		}
 	}
 
+/*---line in the bottom wasn't needed for print---*/
 	article{
 		border-block-end:1px solid  var(--color-background) ;
 
@@ -98,6 +103,8 @@
 			break-inside:avoid;
 	}
 
+/*---we had some breakpoints for texts that are cutting of----*/
+/*---used class for paragraph breaks and identifier for h2 section breaks----*/
 	.breakpoint1{
 		break-before: page; /*--p--*/
 	}
