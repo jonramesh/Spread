@@ -172,7 +172,6 @@ nav{
 
 
 	border-block-end:1px solid  var(--color-text) ;
-
 	position:sticky;
 	inset-block-start: 0;
 	background-color: var(--color-background);
@@ -190,6 +189,7 @@ nav{
 		padding-block:.25rlh;
 		padding-inline-start:.75rlh;
 		padding-inline-end:.75rlh;
+
 		>summary{
 			text-align: center;
 			line-height: 2rem;
@@ -328,11 +328,12 @@ nav{
 		display:grid;
 		row-gap:3rcap;
 		grid-area:body;
+		padding-block-end: 2rlh;
+		padding-inline: 1rem;
 
-		 padding-block-end: 2rlh;
 		@media(width>800px){
 
-		border-inline-start: 1px solid  var(--color-text) ;
+			border-inline-start: 1px solid  var(--color-text) ;
 
 		}
 		@media(width >=1360px){
